@@ -33,7 +33,7 @@ public class BMICalculator {
 
     public static double getIdealWeight(double height, int age, String bodyType) {
         double slimness = calculateSlimness(bodyType);
-        double idealWeight = height - 100 + ((double)(age / 10)) * 0.9 * slimness;
+        double idealWeight = (height - 100 + ((double)(age / 10))) * 0.9 * slimness;
         int leftDot = (int) idealWeight;
         int rightDot = ((int) ((idealWeight * 100) % 100)); // two numbers after dot
         double rightRounded = Math.round((double) rightDot / 10); // for example 69=>70 (6.9=>7.0)
